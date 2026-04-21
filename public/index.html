@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto Parts Store</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1>Auto Parts Store</h1>
+      <nav>
+        <a href="#catalog" class="nav-link active" data-page="catalog">Browse Catalog</a>
+        <a href="#cart" class="nav-link" data-page="cart">Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Catalog page -->
+    <section id="catalog-page" class="page active">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search parts by name..." />
+        <button id="search-btn">Search</button>
+        <button id="clear-btn">Clear</button>
+      </div>
+
+      <div id="catalog-grid" class="catalog-grid">
+        <p class="loading">Loading parts...</p>
+      </div>
+    </section>
+
+    <!-- Cart / checkout page -->
+    <section id="cart-page" class="page">
+      <h2>Your Cart</h2>
+      <div id="cart-items">
+        <p class="empty-msg">Your cart is empty.</p>
+      </div>
+      <div id="cart-summary" class="cart-summary hidden">
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Shipping: $<span id="shipping">0.00</span></p>
+        <p class="total">Total: $<span id="total">0.00</span></p>
+        <button id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
